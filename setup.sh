@@ -21,7 +21,7 @@ ufw enable
 ufw status
 
 # Python 3.7
-apt install build-essential libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev zlib1g zlib1g-dev wget -y
+apt install build-essential libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev zlib1g zlib1g-dev wget sqlite3 libsqlite3-dev -y
 wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
 tar -xzvf Python-3.7.0.tgz
 cd Python-3.7.0
@@ -59,14 +59,16 @@ ufw allow OpenSSH
 ufw enable
 ufw status
 
-# Python
+# EasyEngine
+wget -qO ee rt.cx/ee && sudo bash ee
+
+# Python3.7
 apt install build-essential libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev zlib1g zlib1g-dev -y
 wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
 tar -xzvf Python-3.7.0.tgz
 cd Python-3.7.0
 ./configure --enable-optimizations
-make
-make install
+make && make install
 rm -rfv Python-3.7.0*
 cd ~
 
