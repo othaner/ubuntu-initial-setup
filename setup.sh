@@ -21,6 +21,7 @@ ufw status
 
 # EasyEngine
 wget -qO ee rt.cx/ee && sudo bash ee
+source /etc/bash_completion.d/ee_auto.rc
 
 # Python3.7
 apt install build-essential libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev zlib1g zlib1g-dev -y
