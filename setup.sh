@@ -20,8 +20,10 @@ ufw enable
 ufw status
 
 # EasyEngine
-wget -qO ee rt.cx/ee && sudo bash ee
-source /etc/bash_completion.d/ee_auto.rc
+wget -qO ee https://rt.cx/ee4 && sudo bash ee
+wget -qO ~/.ee-completion.bash https://raw.githubusercontent.com/EasyEngine/easyengine/develop-v4/utils/ee-completion.bash
+echo 'source ~/.ee-completion.bash' >> ~/.bash_profile
+source ~/.ee-completion.bash
 
 # Python3.7
 apt install build-essential libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev zlib1g zlib1g-dev -y
