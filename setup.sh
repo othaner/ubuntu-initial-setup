@@ -22,7 +22,7 @@ ufw status
 # EasyEngine
 wget -qO ee https://rt.cx/ee4 && sudo bash ee
 wget -qO ~/.ee-completion.bash https://raw.githubusercontent.com/EasyEngine/easyengine/develop-v4/utils/ee-completion.bash
-echo 'source ~/.ee-completion.bash' >> ~/.bash_profile
+echo 'source ~/.ee-completion.bash' >> ~/.bashrc
 source ~/.ee-completion.bash
 
 # Python3.7
